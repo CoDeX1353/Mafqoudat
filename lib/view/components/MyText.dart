@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 
 class MyText extends StatelessWidget {
-  MyText ({required this.title,required this.size});
+
   final String title;
   final double size;
+  final Color? color;
+
+  MyText ({required this.title,required this.size,  this.color});
 
 
   @override
@@ -11,7 +14,7 @@ class MyText extends StatelessWidget {
     return Text(title, style: TextStyle (
       fontSize: size,
       fontFamily: "Tajawal",
-      color: Colors.black,
+      color: color,
     ),);
   }
 }

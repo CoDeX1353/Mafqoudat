@@ -15,18 +15,22 @@ class MyTextField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: TextField (
+        cursorColor: Color (0xff6F3CFF) ,
         textAlign: TextAlign.right,
-        decoration: InputDecoration(
+        decoration: InputDecoration (
           hintText: hint,hintStyle: TextStyle(fontSize: 20,
           color: Color (0xffA5A5A5),
           fontFamily: "Tajawal",
              ),
-          enabledBorder: OutlineInputBorder(
-            borderSide: BorderSide(
-              color: Color (0xffA5A5A5)
+          border: OutlineInputBorder (
+            borderSide: BorderSide (
+                color:Color (0xff6F3CFF) ,
+              style: BorderStyle.solid,
             ),
-          borderRadius: BorderRadius.all(Radius.circular(5))
-         ),
+          ),
+          focusedBorder: OutlineInputBorder(
+          borderSide: BorderSide (color: Color (0xff6F3CFF))
+        ),
        ),
       ),
     );

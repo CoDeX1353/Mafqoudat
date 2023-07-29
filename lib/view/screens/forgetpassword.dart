@@ -24,39 +24,41 @@ class fpw extends StatelessWidget {
         ),
       ),
 
-      body: Column (
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
+      body: SingleChildScrollView(
+        child: Column (
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
 
-          Padding(
-            padding: const EdgeInsets.only(left: 280,top: 100),
-            child: MyText (title: "ادخل رمز التأكيد", size: 24),
-          ),
-
-          Padding(
-            padding: const EdgeInsets.only(top: 30,left: 100),
-            child: Text ("ادخل رمز التأكيد المرسل الى بريدك الالكتروني",style: TextStyle(
-                fontSize: 18,color: Color (0xffA5A5A5),fontFamily: "Tajawal")),
-          ),
-
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 75),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                MyOTP(),
-                MyOTP(),
-                MyOTP(),
-                MyOTP(),
-              ],
+            Padding(
+              padding: const EdgeInsets.only(left: 280,top: 100),
+              child: MyText (title: "ادخل رمز التأكيد", size: 24),
             ),
-          ),
-          
-          Padding(
-            padding: const EdgeInsets.only(top: 300),
-            child: MyButton (title: "استمرار", page: signin()),
-          )
-        ],
+
+            Padding(
+              padding: const EdgeInsets.only(top: 30,left: 100),
+              child: Text ("ادخل رمز التأكيد المرسل الى بريدك الالكتروني",style: TextStyle(
+                  fontSize: 18,color: Color (0xffA5A5A5),fontFamily: "Tajawal")),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 75),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MyOTP(),
+                  MyOTP(),
+                  MyOTP(),
+                  MyOTP(),
+                ],
+              ),
+            ),
+
+            Padding(
+              padding: const EdgeInsets.only(top: 300),
+              child: MyButton (title: "استمرار", page: signin()),
+            )
+          ],
+        ),
       ),
     );
   }

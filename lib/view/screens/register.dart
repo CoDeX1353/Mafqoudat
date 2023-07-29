@@ -3,7 +3,7 @@ import 'package:mafqoudat/view/components/MyButton.dart';
 import 'package:mafqoudat/view/components/MyTextField.dart';
 import 'package:mafqoudat/view/screens/sign%20in.dart';
 
-import 'home.dart';
+import 'menu.dart';
 
 
 class register extends StatelessWidget {
@@ -25,27 +25,32 @@ class register extends StatelessWidget {
         ),
       ),
       
-      body: Container(
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 100),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  height: 400,
-                  child: Column (
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      MyTextField(hint: "الاسم"),
-                      MyTextField(hint: "رقم الهاتف"),
-                      MyTextField(hint: "كلمة المرور",icon: Icons.remove_red_eye),
-                      MyTextField(hint: "تأكيد كلمة المرور",icon: Icons.remove_red_eye),
-                    ],
+      body: SingleChildScrollView(
+        child: Container(
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 100),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    height: 400,
+                    child: Column (
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        MyTextField(hint: "الاسم"),
+                        MyTextField(hint: "رقم الهاتف"),
+                        MyTextField(hint: "كلمة المرور",icon: Icons.remove_red_eye),
+                        MyTextField(hint: "تأكيد كلمة المرور",icon: Icons.remove_red_eye),
+                      ],
+                    ),
                   ),
-                ),
-                MyButton(title: "انشاء حساب", page: home()),
-              ],
+                  Padding(
+                    padding: const EdgeInsets.only(top: 120),
+                    child: MyButton(title: "انشاء حساب", page: signin()),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

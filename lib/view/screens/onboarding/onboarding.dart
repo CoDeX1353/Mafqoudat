@@ -36,19 +36,21 @@ class onboarding extends StatelessWidget {
         child: Row (
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            TextButton(onPressed: () { controller.jumpToPage(3);}, child: Text ("SKIP")),
+            TextButton(onPressed: () { controller.jumpToPage(3);}, child: Text ("SKIP",
+              style: TextStyle(color: Color (0xff6F3CFF)),),),
             Center(
               child: SmoothPageIndicator (
                 controller: controller,
                 count: 4,
                 effect: WormEffect(
                   spacing: 15,
-                  dotColor: Color (0xffA5A5A5),
+                  dotColor: Color (0xff87A7A7),
                   activeDotColor: Color (0xff6F3CFF)
                 ),
               ),
             ),
-            TextButton(onPressed: (){controller.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut);}, child: Text ("NEXT")),
+            TextButton(onPressed: (){controller.nextPage(duration: Duration(milliseconds: 500), curve: Curves.easeInOut);},
+                child: Text ("NEXT",style: TextStyle(color: Color (0xff6F3CFF)),)),
           ],
         ),
       ),

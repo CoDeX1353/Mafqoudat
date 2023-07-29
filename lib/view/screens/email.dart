@@ -24,27 +24,29 @@ class emailscr extends StatelessWidget {
         ),
       ),
 
-      body: Column (
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
+      body: SingleChildScrollView (
+        child: Column (
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
 
-          Padding(
-            padding: const EdgeInsets.only(top: 100),
-            child: MyTextField(hint: "البريد الالكتروني"),
-          ),
+            Padding(
+              padding: const EdgeInsets.only(top: 100),
+              child: MyTextField(hint: "البريد الالكتروني"),
+            ),
 
-          Padding(
-            padding: const EdgeInsets.only(top: 30,left: 100),
-            child: Text ("سيتم ارسال رمز التأكيد على البريد الالكتروني",style: TextStyle(
-                fontSize: 18,color: Color (0xffA5A5A5),fontFamily: "Tajawal")),
-          ),
+            Padding(
+              padding: const EdgeInsets.only(top: 30,left: 100),
+              child: Text ("سيتم ارسال رمز التأكيد على البريد الالكتروني",style: TextStyle(
+                  fontSize: 18,color: Color (0xffA5A5A5),fontFamily: "Tajawal")),
+            ),
 
 
-          Padding(
-            padding: const EdgeInsets.only(top: 500),
-            child: MyButton (title: "استمرار", page: fpw()),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.only(top: 500),
+              child: MyButton (title: "استمرار", page: fpw()),
+            )
+          ],
+        ),
       ),
     );
   }
